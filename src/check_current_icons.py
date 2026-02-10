@@ -18,4 +18,11 @@ def check_current_icons(usr_change):
             return "Default"
         else:
             return "Unknown"
+    elif usr_change == "Quest 3":
+        if os.path.exists(os.path.join(real_case_path(find_steam_path()), "steamapps", "common", "SteamVR", "drivers", "oculus", "resources", "icons", "custom_headset_sensor")):
+            return "Custom"
+        elif os.path.exists(os.path.join(real_case_path(find_steam_path()),  "steamapps", "common", "SteamVR", "drivers", "oculus", "resources", "icons", "quest_headset_ready.png")):
+            return "Default"
+        else:
+            return "Unknown"
     

@@ -4,6 +4,8 @@ from src.wands.custom_wands_set import custom_wands_set
 from src.wands.default_wands_set import default_wands_set
 from src.quest_controllers.custom_quest_controller_set import custom_quest_controller_set
 from src.quest_controllers.default_quest_controller_set import default_quest_controller_set
+from src.Quest3_headset.custom_quest3_headset_set import custom_quest3_headset_set
+from src.Quest3_headset.default_quest3_headset_set import default_quest3_headset_set
 
 from src.clear import clear
 
@@ -70,12 +72,18 @@ def action_selector():
                 case "1":
                     if usr_change == "Wands":
                         custom_wands_set()
-                    elif usr_change =="Touch Pro":
+                    elif usr_change == "Touch Pro":
+                        custom_quest_controller_set()
+                    elif usr_change == "Quest 3":
+                        custom_quest3_headset_set()
                         custom_quest_controller_set()
                 case "2":
                     if usr_change == "Wands":
                         default_wands_set()
                     elif usr_change == "Touch Pro":
+                        default_quest_controller_set()
+                    elif usr_change == "Quest 3":
+                        default_quest3_headset_set()
                         default_quest_controller_set()
                 case "3":
                     usr_change = None
